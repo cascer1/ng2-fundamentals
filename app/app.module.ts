@@ -6,9 +6,13 @@ import {EventThumbnailComponent} from "./events/event-thumbnail.component";
 
 @NgModule({
     imports: [BrowserModule],
-    declarations: [EventsAppComponent, EventsListComponent, EventThumbnailComponent],
+    declarations: [
+        EventsAppComponent,
+        EventsListComponent,
+        EventThumbnailComponent
+    ],
     bootstrap: [EventsAppComponent]
 })
-export  class AppModule {
+export class AppModule {
 
 }
