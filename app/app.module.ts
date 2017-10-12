@@ -9,6 +9,7 @@ import {NavBarComponent} from "./nav/navbar.component";
 import {ToastrService} from "./common/toastr.service";
 import {appRoutes} from "./routes";
 import {RouterModule} from "@angular/router";
+import {CreateEventComponent} from "./events/create-event.component";
 
 @NgModule({
     imports: [
@@ -20,6 +21,7 @@ import {RouterModule} from "@angular/router";
         EventsListComponent,
         EventThumbnailComponent,
         EventDetailsComponent,
+        CreateEventComponent,
         NavBarComponent
     ],
     providers: [
