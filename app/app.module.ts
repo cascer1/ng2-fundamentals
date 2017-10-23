@@ -9,16 +9,18 @@ import {Error404Component} from "./errors/404.component";
 
 import {
     CreateEventComponent,
+    CreateSessionComponent,
     EventDetailsComponent,
     EventListResolver,
     EventRouteActivator,
     EventService,
     EventsListComponent,
-    EventThumbnailComponent
+    EventThumbnailComponent,
+    SessionListComponent
 } from './events/index'
 import {AuthService} from "./user/auth.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {CreateSessionComponent} from "./events/event-details/create-session.component";
+
 
 @NgModule({
     imports: [
@@ -34,6 +36,7 @@ import {CreateSessionComponent} from "./events/event-details/create-session.comp
         EventDetailsComponent,
         CreateEventComponent,
         CreateSessionComponent,
+        SessionListComponent,
         NavBarComponent,
         Error404Component
     ],
