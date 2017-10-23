@@ -10,14 +10,14 @@ import {Error404Component} from "./errors/404.component";
 import {
     CreateEventComponent,
     CreateSessionComponent,
+    DurationPipe,
     EventDetailsComponent,
     EventListResolver,
     EventRouteActivator,
     EventService,
     EventsListComponent,
     EventThumbnailComponent,
-    SessionListComponent,
-    DurationPipe
+    SessionListComponent
 } from './events/index'
 import {AuthService} from "./user/auth.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
