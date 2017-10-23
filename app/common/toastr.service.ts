@@ -1,22 +1,14 @@
-import {Injectable} from "@angular/core";
+import {InjectionToken} from "@angular/core";
 
-declare let toastr:any;
+// Use object instead of string to avoid conflicts
+export let TOASTR_TOKEN = new InjectionToken('toastr');
 
-@Injectable()
-export class ToastrService{
-    success(message: string, title?:string) {
-        toastr.success(message, title);
-    }
+export interface Toastr {
+    success (mst: string, title?: string): void;
 
-    info(message: string, title?:string) {
-        toastr.info(message, title);
-    }
+    info (msg: string, title?: string): void;
 
-    warning(message: string, title?:string) {
-        toastr.warning(message, title);
-    }
+    warning(msg: string, title?: string): void;
 
-    error(message: string, title?:string) {
-        toastr.error(message, title);
-    }
+    error(msg: string, title?: string): void;
 }
