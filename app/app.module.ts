@@ -18,6 +18,7 @@ import {
 } from './events/index'
 import {AuthService} from "./user/auth.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {CreateSessionComponent} from "./events/event-details/create-session.component";
 
 @NgModule({
     imports: [
@@ -32,6 +33,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
         EventThumbnailComponent,
         EventDetailsComponent,
         CreateEventComponent,
+        CreateSessionComponent,
         NavBarComponent,
         Error404Component
     ],
