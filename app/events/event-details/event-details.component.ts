@@ -22,6 +22,7 @@ import {ActivatedRoute} from "@angular/router";
 export class EventDetailsComponent implements OnInit {
     event: IEvent;
     addMode: boolean = false;
+    filterBy: string = 'all';
 
     constructor(private eventService: EventService, private route: ActivatedRoute) {
     }
@@ -35,9 +36,7 @@ export class EventDetailsComponent implements OnInit {
     }
 
     saveNewSession(session:ISession) {
-        const nextId = Math.max.apply(null, this.event.sessions.map(s => s.id)) + 1;
-
-        session.id = nextId;
+        session.id = Math.max.apply(null, this.event.sessions.map(s => s.id)) + 1;
         this.event.sessions.push(session);
         this.eventService.updateEvent(this.event);
         this.addMode = false;
