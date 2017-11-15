@@ -2,7 +2,6 @@ import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {EventsAppComponent} from "./events-app.component";
 import {NavBarComponent} from "./nav/navbar.component";
-import {Toastr, TOASTR_TOKEN} from "./common/toastr.service";
 import {appRoutes} from "./routes";
 import {RouterModule} from "@angular/router";
 import {Error404Component} from "./errors/404.component";
@@ -21,9 +20,17 @@ import {
 } from './events/index'
 import {AuthService} from "./user/auth.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {CollapsibleWellComponent} from "./common/collapsible-well.component";
+import {
+    CollapsibleWellComponent,
+    Toastr,
+    TOASTR_TOKEN,
+    SimpleModalComponent,
+    ModalTriggerDirective
+} from "./common/index";
+import {JQ_TOKEN} from "./common/jQuery.service";
 
 declare let toastr: Toastr;
+declare let jQuery: Object;
 
 @NgModule({
     imports: [
@@ -43,7 +50,9 @@ declare let toastr: Toastr;
         NavBarComponent,
         CollapsibleWellComponent,
         DurationPipe,
-        Error404Component
+        Error404Component,
+        SimpleModalComponent,
+        ModalTriggerDirective
     ],
     providers: [
         EventService,
@@ -51,6 +60,10 @@ declare let toastr: Toastr;
         {
             provide: TOASTR_TOKEN,
             useValue: toastr
+        },
+        {
+            provide: JQ_TOKEN,
+            useValue: jQuery
         },
         {
             provide: 'canDeactivateCreateEvent',
