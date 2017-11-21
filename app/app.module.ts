@@ -18,7 +18,8 @@ import {
     EventThumbnailComponent,
     SessionListComponent,
     UpvoteComponent,
-    VoterService
+    VoterService,
+    LocationValidator
 } from './events/index'
 import {AuthService} from "./user/auth.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -55,7 +56,8 @@ declare let jQuery: Object;
         Error404Component,
         SimpleModalComponent,
         ModalTriggerDirective,
-        UpvoteComponent
+        UpvoteComponent,
+        LocationValidator
     ],
     providers: [
         EventService,
