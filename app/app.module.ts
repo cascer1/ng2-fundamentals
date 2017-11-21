@@ -17,7 +17,8 @@ import {
     EventsListComponent,
     EventThumbnailComponent,
     SessionListComponent,
-    UpvoteComponent
+    UpvoteComponent,
+    VoterService
 } from './events/index'
 import {AuthService} from "./user/auth.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -59,6 +60,7 @@ declare let jQuery: Object;
     providers: [
         EventService,
         EventRouteActivator,
+        VoterService,
         {
             provide: TOASTR_TOKEN,
             useValue: toastr
